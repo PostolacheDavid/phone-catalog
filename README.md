@@ -11,7 +11,7 @@
 - [x] Setup Project
 - [x] Plan the project
 - [ ] Setup Redux
-- [ ] Setup the Header
+- [x] Setup the Header
 - [ ] Setup the body
 - [ ] Setup the footer
 
