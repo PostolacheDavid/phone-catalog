@@ -1,5 +1,7 @@
+import Navbar from "./Components/Nabar";
+
 function App() {
-  return <h1>Redux Toolkit</h1>;
+  return <Navbar />;
 }
 
 export default App;
