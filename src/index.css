@@ -66,8 +66,8 @@ html {
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 1rem 4rem;
+  justify-content: space-around;
+  padding: 1rem 0rem;
   background-color: var(--HEADER-BGCOLOR);
   color: var(--HEADER-TEXTCOLOR);
 }
