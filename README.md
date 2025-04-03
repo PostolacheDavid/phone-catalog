@@ -9,7 +9,11 @@
 ### TO-DO List:
 
 - [x] Setup Project
-- [ ] Plan the project
+- [x] Plan the project
+- [ ] Setup Redux
+- [ ] Setup the Header
+- [ ] Setup the body
+- [ ] Setup the footer
 
 ## Notes
 
