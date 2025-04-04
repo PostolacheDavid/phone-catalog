@@ -54,6 +54,12 @@ textarea {
 
 /* || GENERAL STYLES */
 
+html,
+body,
+#root {
+  height: 100%;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: var(--FS);
@@ -61,15 +67,24 @@ html {
   background-color: var(--BACKGROUND-COLOR);
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
 /* || HEADER */
 
 nav {
+  height: 5.4rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 1rem 0rem;
   background-color: var(--HEADER-BGCOLOR);
   color: var(--HEADER-TEXTCOLOR);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .cartIcon {
@@ -77,6 +92,7 @@ nav {
   padding: 0.7rem;
   border-radius: 50%;
   position: relative;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .amount {
@@ -92,4 +108,56 @@ nav {
 
 nav h1 {
   margin-top: 0.5rem;
+}
+
+/* || MAIN */
+
+main {
+  height: calc(100vh - 5.4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--BODY-TEXTCOLOR);
+}
+
+main h1 {
+  margin-top: 5rem;
+  text-transform: uppercase;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 70%;
+  padding-bottom: 5rem;
+}
+
+.total {
+  display: flex;
+  flex-direction: row;
+  margin-top: 8rem;
+  justify-content: space-between;
+  border-top: 1px solid gray;
+}
+
+.clearCart {
+  background-color: var(--BACKGROUND-COLOR);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  color: var(--BODY-TEXTCOLOR);
+  border: 2px solid var(--BODY-TEXTCOLOR);
+  cursor: pointer;
+  transition: all ease-in-out 0.1s;
+}
+
+.clearCart:active {
+  transform: scale(1);
+  transform: translateY(5px);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.emptyBag {
+  margin-bottom: 50%;
 }
