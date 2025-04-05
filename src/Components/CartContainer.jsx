@@ -1,27 +1,36 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import CartItem from "./CartItem";
+import { clearCart } from "../features/cart/cartSlice";
 
 const CartContainer = () => {
-  const items = useSelector((store) => store.cart.cartItems);
+  const dispatch = useDispatch();
+  const { cartItems, total } = useSelector((store) => store.cart);
   return (
     <main>
-      {items.length > 0 ? (
+      {cartItems.length > 0 ? (
         <>
           <h1>Your Bag</h1>
           <div className="items">
             <CartItem />
             <div className="total">
               <p>Total</p>
-              <p>$0</p>
+              <p>${total.toFixed(2)}</p>
             </div>
           </div>
-          <button className="clearCart">Clear Cart</button>
+          <button
+            className="clearCart"
+            onClick={() => {
+              dispatch(clearCart());
+            }}
+          >
+            Clear Cart
+          </button>
         </>
       ) : (
-        <div className="emptyBag">
+        <>
           <h1>Your Bag</h1>
-          <p>Is empty..</p>
-        </div>
+          <h2>Is empty..</h2>
+        </>
       )}
     </main>
   );
