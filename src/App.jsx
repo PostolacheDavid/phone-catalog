@@ -9,6 +9,9 @@ function App() {
   const { cartItems } = useSelector((store) => {
     return store.cart;
   });
+  const { isOpen } = useSelector((store) => {
+    return store.modal;
+  });
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -17,7 +20,7 @@ function App() {
 
   return (
     <>
-      <Modal />
+      {isOpen && <Modal />}
       <Navbar />
       <CartContainer />
     </>
