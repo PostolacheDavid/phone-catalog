@@ -13,7 +13,8 @@
 - [x] Setup Redux
 - [x] Setup the Header
 - [x] Setup the body
-- [ ] Setup the apis
+- [x] Setup the apis
+- [ ] Setup @media for different resolutions
 
 ## Notes
 
