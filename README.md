@@ -14,7 +14,7 @@
 - [x] Setup the Header
 - [x] Setup the body
 - [x] Setup the apis
-- [ ] Setup @media for different resolutions
+- [x] Setup @media for different resolutions
 
 ## Notes
 
